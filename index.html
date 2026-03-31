@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Lafuente — Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <nav class="top-nav" id="topNav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">AL</a>
+            <div class="nav-links">
+                <a href="#about" data-i18n="nav_about">Sobre mí</a>
+                <a href="#experience" data-i18n="nav_experience">Experiencia</a>
+                <a href="#skills" data-i18n="nav_skills">Skills</a>
+                <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+                <a href="#education" data-i18n="nav_education">Formación</a>
+                <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+                    <span class="lang-label">ES</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" data-i18n="nav_about">Sobre mí</a>
+        <a href="#experience" data-i18n="nav_experience">Experiencia</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+        <a href="#education" data-i18n="nav_education">Formación</a>
+        <a href="#contact" data-i18n="nav_contact">Contacto</a>
+        <div class="mobile-lang-row">
+            <button class="mobile-lang-btn" id="mobileLangBtn">ES</button>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title" data-reveal>
+                    Antonio<br>Lafuente
+                </h1>
+                <div class="hero-eyebrow" data-reveal data-delay="1">Barcelona, España</div>
+                <p class="hero-subtitle" data-reveal data-delay="2">
+                    <span data-i18n="hero_subtitle">Software Developer especializado en <strong>Java/Spring Boot</strong> y <strong>Mobile</strong> (Kotlin & Flutter). Construyo aplicaciones escalables con rigor técnico y Clean Architecture.</span>
+                </p>
+                <div class="hero-actions" data-reveal data-delay="3">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_1">Hablemos</a>
+                    <a href="#experience" class="btn btn-tonal" data-i18n="hero_cta_2">Ver experiencia</a>
+                </div>
+                <div class="hero-meta" data-reveal data-delay="4">
+                    <span class="meta-chip">Java 17+</span>
+                    <span class="meta-chip">Spring Boot 3</span>
+                    <span class="meta-chip">Kotlin</span>
+                    <span class="meta-chip">Flutter</span>
+                    <span class="meta-chip">Clean Architecture</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shape"></div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-inner">
+                <div class="section-header" data-reveal>
+                    <span class="section-label">01</span>
+                    <h2 class="section-title" data-i18n="about_title">Sobre mí</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal data-delay="1">
+                        <p class="about-lead" data-i18n="about_lead">
+                            Desarrollador de Software con formación en Desarrollo de Aplicaciones Multiplataforma, especializado tanto en backend Java como en desarrollo mobile nativo y multiplataforma.
+                        </p>
+                        <p data-i18n="about_p2">
+                            Aporto madurez profesional y un compromiso con el rigor técnico desarrollado en entornos internacionales. Mi enfoque combina Clean Architecture, TDD y metodologías ágiles para entregar productos de alta calidad.
+                        </p>
+                        <p data-i18n="about_p3">
+                            He trabajado en plataformas SaaS B2B del sector HealthTech, implementando sistemas multi-tenant, integración con IA mediante LLMs, y arquitecturas de microservicios con cumplimiento RGPD.
+                        </p>
+                    </div>
+                    <div class="about-stats" data-reveal data-delay="2">
+                        <div class="stat-card">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label" data-i18n="stat_exp">Años de experiencia</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label" data-i18n="stat_features">Funcionalidades entregadas</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label" data-i18n="stat_corporate">Proyectos corporativos</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label" data-i18n="stat_personal">Proyectos personales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section-alt">
+            <div class="section-inner">
+                <div class="section-header" data-reveal>
+                    <span class="section-label">02</span>
+                    <h2 class="section-title" data-i18n="exp_title">Experiencia</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div>
+                                    <h3 class="timeline-role" data-i18n="psicaid_role">Backend & Mobile Developer</h3>
+                                    <p class="timeline-company" data-i18n="psicaid_company">Psicaid — Valencia, España</p>
+                                </div>
+                                <span class="timeline-date" data-i18n="psicaid_date">Feb 2026 – Actualidad</span>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Java 17</span>
+                                <span class="tag">Spring Boot 3</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">JWT</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">LLMs</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li data-i18n="psicaid_li1">Diseñé y desarrollé APIs RESTful escalables y seguras para plataforma SaaS B2B HealthTech con arquitectura multi-tenant</li>
+                                <li data-i18n="psicaid_li2">Implementé autenticación JWT con aislamiento estricto de datos entre profesionales de la salud</li>
+                                <li data-i18n="psicaid_li3">Diseñé comunicación con microservicio Python (FastAPI) para procesamiento de notas clínicas mediante LLMs</li>
+                                <li data-i18n="psicaid_li4">Desarrollé sistema de trazabilidad y logs con clasificación de criticidad para cumplimiento RGPD</li>
+                                <li data-i18n="psicaid_li5">Lideré el desarrollo mobile con Flutter + Riverpod, integrando interfaz asistida por IA con resúmenes clínicos</li>
+                                <li data-i18n="psicaid_li6">Optimicé PostgreSQL con HikariCP y patrón DTO para payloads ligeros y paginados</li>
+                                <li data-i18n="psicaid_li7">Desplegué en Render, orquestando arquitectura distribuida para alta disponibilidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal data-delay="1">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <div>
+                                    <h3 class="timeline-role" data-i18n="pukkas_role">Junior Software Developer</h3>
+                                    <p class="timeline-company" data-i18n="pukkas_company">Pukkas S.L. — Barcelona, España</p>
+                                </div>
+                                <span class="timeline-date" data-i18n="pukkas_date">Mar 2025 – Jun 2025</span>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">RESTful APIs</span>
+                                <span class="tag">Scrum</span>
+                                <span class="tag">Jira</span>
+                            </div>
+                            <ul class="timeline-details">
+                                <li data-i18n="pukkas_li1">Arquitecturé e implementé 5 endpoints de APIs RESTful para consumo fluido de clientes móviles</li>
+                                <li data-i18n="pukkas_li2">Desarrollé 25+ funcionalidades para sitios web corporativos con alineamiento 100% al cliente</li>
+                                <li data-i18n="pukkas_li3">Completé 12 ciclos de Scrum con el 100% de tickets de Jira entregados en plazo</li>
+                                <li data-i18n="pukkas_li4">Participé en code reviews y documentación técnica para 6 proyectos corporativos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-inner">
+                <div class="section-header" data-reveal>
+                    <span class="section-label">03</span>
+                    <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+                </div>
+                <div class="skills-bento">
+                    <div class="bento-card bento-wide" data-reveal>
+                        <h3 class="bento-title" data-i18n="skill_backend">Backend & Java</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Java 17+</span>
+                            <span class="pill">Spring Boot 3</span>
+                            <span class="pill">Spring Cloud</span>
+                            <span class="pill">Spring WebFlux</span>
+                            <span class="pill">Hibernate/JPA</span>
+                            <span class="pill">Jakarta EE</span>
+                            <span class="pill">Maven</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">Express.js</span>
+                            <span class="pill">PHP</span>
+                        </div>
+                    </div>
+                    <div class="bento-card" data-reveal data-delay="1">
+                        <h3 class="bento-title" data-i18n="skill_mobile">Mobile</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Kotlin</span>
+                            <span class="pill">Jetpack Compose</span>
+                            <span class="pill">Flutter</span>
+                            <span class="pill">Dart</span>
+                            <span class="pill">Android SDK</span>
+                            <span class="pill">Riverpod</span>
+                            <span class="pill">BLoC/Cubit</span>
+                        </div>
+                    </div>
+                    <div class="bento-card" data-reveal data-delay="2">
+                        <h3 class="bento-title" data-i18n="skill_arch">Arquitectura</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Clean Architecture</span>
+                            <span class="pill">MVVM</span>
+                            <span class="pill">SOLID</span>
+                            <span class="pill">Patrones GoF</span>
+                            <span class="pill">Microservicios</span>
+                            <span class="pill">TDD</span>
+                            <span class="pill">fpdart</span>
+                        </div>
+                    </div>
+                    <div class="bento-card" data-reveal data-delay="1">
+                        <h3 class="bento-title" data-i18n="skill_testing">Testing</h3>
+                        <div class="skill-pills">
+                            <span class="pill">JUnit 5</span>
+                            <span class="pill">Mockito</span>
+                            <span class="pill">Espresso</span>
+                            <span class="pill">Unit Testing</span>
+                            <span class="pill">UI Testing</span>
+                        </div>
+                    </div>
+                    <div class="bento-card" data-reveal data-delay="2">
+                        <h3 class="bento-title" data-i18n="skill_infra">Infraestructura</h3>
+                        <div class="skill-pills">
+                            <span class="pill">Docker</span>
+                            <span class="pill">PostgreSQL</span>
+                            <span class="pill">Supabase</span>
+                            <span class="pill">Firebase</span>
+                            <span class="pill">Git</span>
+                            <span class="pill">GitHub</span>
+                            <span class="pill">Render</span>
+                            <span class="pill">Prisma ORM</span>
+                            <span class="pill">HikariCP</span>
+                        </div>
+                    </div>
+                    <div class="bento-card bento-wide" data-reveal data-delay="3">
+                        <h3 class="bento-title" data-i18n="skill_other">Otros</h3>
+                        <div class="skill-pills">
+                            <span class="pill">RESTful APIs</span>
+                            <span class="pill">JWT Auth</span>
+                            <span class="pill">Scrum / Kanban</span>
+                            <span class="pill">Jira</span>
+                            <span class="pill">Coroutines</span>
+                            <span class="pill">StateFlow</span>
+                            <span class="pill">LLM Integration</span>
+                            <span class="pill">C#</span>
+                            <span class="pill">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="section-inner">
+                <div class="section-header" data-reveal>
+                    <span class="section-label">04</span>
+                    <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card" data-reveal>
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <h3 class="project-name">Psicaid</h3>
+                        <p class="project-desc" data-i18n="project_psicaid">Plataforma B2B completa para psicólogos. Lideré el desarrollo full-stack: experiencia mobile en Flutter con Riverpod (invalidación reactiva de datos, interfaz para resúmenes clínicos generados por LLMs, modo oscuro, layouts tablet) y backend en Java 17/Spring Boot 3 (APIs RESTful, JWT multi-tenant, integración con microservicio Python/FastAPI para IA, trazabilidad RGPD). Despliegue en Render.</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Riverpod</span>
+                            <span class="tag-sm">Spring Boot 3</span>
+                            <span class="tag-sm">JWT</span>
+                            <span class="tag-sm">PostgreSQL</span>
+                            <span class="tag-sm">FastAPI</span>
+                            <span class="tag-sm">Docker</span>
+                        </div>
+                        <a href="https://github.com/ALaLodev/psicaid-flutter-java" target="_blank" rel="noopener" class="project-link" aria-label="Psicaid en GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="project-card" data-reveal data-delay="1">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="project-name">Task Flow</h3>
+                        <p class="project-desc" data-i18n="project_taskflow">Sistema Full Stack completo de gestión de tareas con backend en Node.js/Express y frontend en Flutter. Autenticación JWT, sincronización CRUD en tiempo real y manejo robusto de errores con fpdart.</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Flutter</span>
+                            <span class="tag-sm">Node.js</span>
+                            <span class="tag-sm">TypeScript</span>
+                            <span class="tag-sm">Prisma</span>
+                            <span class="tag-sm">PostgreSQL</span>
+                            <span class="tag-sm">Docker</span>
+                        </div>
+                        <a href="https://github.com/ALaLodev/Task-App-Flutter-Node-Postgres-" target="_blank" rel="noopener" class="project-link" aria-label="Task Flow en GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="project-card" data-reveal data-delay="2">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3 class="project-name">Penny Track</h3>
+                        <p class="project-desc" data-i18n="project_pennytrack">Aplicación de gestión financiera con Clean Architecture y BLoC/Cubit. Sincronización híbrida con persistencia local (Drift/SQLite) y Firebase Auth. Visualización de datos con gráficos avanzados.</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Flutter</span>
+                            <span class="tag-sm">BLoC</span>
+                            <span class="tag-sm">Drift/SQLite</span>
+                            <span class="tag-sm">Firebase</span>
+                        </div>
+                        <a href="https://github.com/ALaLodev/penny_track" target="_blank" rel="noopener" class="project-link" aria-label="Penny Track en GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="project-card" data-reveal>
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="project-name">ChatApp</h3>
+                        <p class="project-desc" data-i18n="project_chatapp">Aplicación de chat moderna para Android con mensajería instantánea fluida. Diseño limpio, arquitectura sólida y tecnologías modernas para una experiencia de comunicación confiable.</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Kotlin</span>
+                            <span class="tag-sm">Android</span>
+                            <span class="tag-sm">Firebase</span>
+                            <span class="tag-sm">MVVM</span>
+                        </div>
+                        <a href="https://github.com/ALaLodev/Chat-App" target="_blank" rel="noopener" class="project-link" aria-label="ChatApp en GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="project-card" data-reveal data-delay="1">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="project-name">Guess Wars</h3>
+                        <p class="project-desc" data-i18n="project_guesswars">Juego de cartas multijugador para Android con pistas dinámicas, música de fondo adaptativa, notificaciones push, captura de pantalla, autenticación Firebase, clasificación global e interfaz multilingüe.</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Kotlin</span>
+                            <span class="tag-sm">Android</span>
+                            <span class="tag-sm">Firebase</span>
+                            <span class="tag-sm">Services</span>
+                            <span class="tag-sm">Room</span>
+                        </div>
+                        <a href="https://github.com/ALaLodev/ByteBuiders" target="_blank" rel="noopener" class="project-link" aria-label="Guess Wars en GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="project-card" data-reveal data-delay="2">
+                        <div class="project-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20M2 12h20"/>
+                            </svg>
+                        </div>
+                        <h3 class="project-name">HoroscoApp</h3>
+                        <p class="project-desc" data-i18n="project_horosco">App nativa de horóscopo con predicciones diarias, caché offline, MVVM con Dagger/Hilt, Retrofit, Room, Coroutines, StateFlow y tests completos (JUnit, Mockito, Espresso).</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Kotlin</span>
+                            <span class="tag-sm">MVVM</span>
+                            <span class="tag-sm">Dagger/Hilt</span>
+                            <span class="tag-sm">Retrofit</span>
+                            <span class="tag-sm">Room</span>
+                            <span class="tag-sm">Coroutines</span>
+                        </div>
+                        <a href="https://github.com/ALaLodev/HoroscoApp" target="_blank" rel="noopener" class="project-link" aria-label="HoroscoApp en GitHub">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="section-inner">
+                <div class="section-header" data-reveal>
+                    <span class="section-label">05</span>
+                    <h2 class="section-title" data-i18n="edu_title">Formación</h2>
+                </div>
+                <div class="education-grid">
+                    <div class="edu-card" data-reveal>
+                        <div class="edu-year">2026</div>
+                        <h3 class="edu-title" data-i18n="edu1_title">Certified Agile Digital Product Practitioner™ (CADPP™)</h3>
+                        <p class="edu-inst">Igrowker ISA, Delaware, USA</p>
+                        <p class="edu-desc" data-i18n="edu1_desc">75h de entrenamiento en metodologías ágiles (Scrum/Kanban), equipos multidisciplinarios y desarrollo con IA integrada.</p>
+                    </div>
+                    <div class="edu-card" data-reveal data-delay="1">
+                        <div class="edu-year">2026</div>
+                        <h3 class="edu-title" data-i18n="edu2_title">Máster Java Masterclass (160h)</h3>
+                        <p class="edu-inst">Udemy</p>
+                        <p class="edu-desc" data-i18n="edu2_desc">Java 21, Spring Boot 3, Microservicios.</p>
+                    </div>
+                    <div class="edu-card" data-reveal data-delay="2">
+                        <div class="edu-year">2025</div>
+                        <h3 class="edu-title" data-i18n="edu3_title">Grado Superior DAM</h3>
+                        <p class="edu-inst">Jesuïtes El Clot</p>
+                        <p class="edu-desc" data-i18n="edu3_desc">Desarrollo de Aplicaciones Multiplataforma.</p>
+                    </div>
+                    <div class="edu-card" data-reveal data-delay="1">
+                        <div class="edu-year">2025</div>
+                        <h3 class="edu-title" data-i18n="edu4_title">Flutter (250h)</h3>
+                        <p class="edu-inst">CIFO-La Violeta</p>
+                        <p class="edu-desc" data-i18n="edu4_desc">Desarrollo de aplicaciones Android/iOS con Flutter.</p>
+                    </div>
+                    <div class="edu-card" data-reveal data-delay="2">
+                        <div class="edu-year">2024</div>
+                        <h3 class="edu-title" data-i18n="edu5_title">Kotlin + Jetpack Compose (54h)</h3>
+                        <p class="edu-inst">AppCademy</p>
+                        <p class="edu-desc" data-i18n="edu5_desc">Kotlin con Jetpack Compose y Firebase para Android.</p>
+                    </div>
+                    <div class="edu-card" data-reveal data-delay="3">
+                        <div class="edu-year">2023</div>
+                        <h3 class="edu-title" data-i18n="edu6_title">Bases de Datos</h3>
+                        <p class="edu-inst">Oracle Academy</p>
+                        <p class="edu-desc" data-i18n="edu6_desc">Diseño y Programación de Bases de Datos.</p>
+                    </div>
+                </div>
+                <div class="languages-row" data-reveal data-delay="2">
+                    <h3 class="languages-title" data-i18n="languages_title">Idiomas</h3>
+                    <div class="lang-chips">
+                        <span class="lang-chip">Español <em data-i18n="lang_native">Nativo</em></span>
+                        <span class="lang-chip">Catalán <em data-i18n="lang_native">Nativo</em></span>
+                        <span class="lang-chip">Alemán <em>B2</em></span>
+                        <span class="lang-chip">Inglés <em>B1</em></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="section-inner">
+                <div class="contact-wrapper" data-reveal>
+                    <div class="contact-content">
+                        <span class="section-label">06</span>
+                        <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
+                        <p class="contact-text" data-i18n="contact_text">¿Tienes un proyecto en mente o buscas un desarrollador para tu equipo? Hablemos.</p>
+                        <div class="contact-links">
+                            <a href="mailto:antonio.lafuente@outlook.com" class="contact-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                                antonio.lafuente@outlook.com
+                            </a>
+                            <a href="tel:+34633485838" class="contact-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                (+34) 633 48 58 38
+                            </a>
+                            <a href="https://www.linkedin.com/in/antonio-lafuente" target="_blank" rel="noopener" class="contact-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/alalodev" target="_blank" rel="noopener" class="contact-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>Antonio Lafuente — 2026</p>
+            <p class="footer-rights" data-i18n="footer_rights">Todos los derechos reservados</p>
+            <p class="footer-location">Barcelona, España</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
