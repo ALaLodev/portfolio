@@ -60,7 +60,8 @@
             project_pennytrack: 'Aplicación de gestión financiera con Clean Architecture y BLoC/Cubit. Sincronización híbrida con persistencia local (Drift/SQLite) y Firebase Auth. Visualización de datos con gráficos avanzados.',
             project_chatapp: 'Aplicación de chat moderna para Android con mensajería instantánea fluida. Diseño limpio, arquitectura sólida y tecnologías modernas para una experiencia de comunicación confiable.',
             project_guesswars: 'Juego de cartas multijugador para Android con pistas dinámicas, música de fondo adaptativa, notificaciones push, captura de pantalla, autenticación Firebase, clasificación global e interfaz multilingüe.',
-            project_horosco: 'App nativa de horóscopo con predicciones diarias, caché offline, MVVM con Dagger/Hilt, Retrofit, Room, Coroutines, StateFlow y tests completos (JUnit, Mockito, Espresso).',
+            project_demo: 'Demo',
+            project_screenshots: 'Capturas',
             edu_title: 'Formación',
             edu1_title: 'Certified Agile Digital Product Practitioner™ (CADPP™)',
             edu1_desc: '75h de entrenamiento en metodologías ágiles (Scrum/Kanban), equipos multidisciplinarios y desarrollo con IA integrada.',
@@ -129,7 +130,8 @@
             project_pennytrack: 'Financial management app with Clean Architecture and BLoC/Cubit. Hybrid sync with local persistence (Drift/SQLite) and Firebase Auth. Data visualization with advanced charts.',
             project_chatapp: 'Modern chat application for Android with seamless instant messaging. Clean design, solid architecture, and modern technologies for a reliable communication experience.',
             project_guesswars: 'Multiplayer card game for Android with dynamic hints, adaptive background music, push notifications, screenshot capture, Firebase auth, global leaderboard, and multilingual interface.',
-            project_horosco: 'Native horoscope app with daily predictions, offline cache, MVVM with Dagger/Hilt, Retrofit, Room, Coroutines, StateFlow, and comprehensive tests (JUnit, Mockito, Espresso).',
+            project_demo: 'Demo',
+            project_screenshots: 'Screenshots',
             edu_title: 'Education',
             edu1_title: 'Certified Agile Digital Product Practitioner™ (CADPP™)',
             edu1_desc: '75h of training in agile methodologies (Scrum/Kanban), multidisciplinary teams, and AI-integrated development.',
@@ -362,6 +364,136 @@
     };
 
     /* ============================================
+       Video Modal Module
+       ============================================ */
+    const VideoModal = {
+        dialog: null,
+        video: null,
+        closeBtn: null,
+
+        init() {
+            this.dialog = document.getElementById('videoModal');
+            if (!this.dialog) return;
+
+            this.video = this.dialog.querySelector('video');
+            this.closeBtn = this.dialog.querySelector('.close-modal');
+
+            // Find all demo buttons (they exist in HTML or are translated by I18n)
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.demo-btn');
+                if (btn) {
+                    e.preventDefault();
+                    const videoSrc = btn.getAttribute('data-video');
+                    if (videoSrc) this.open(videoSrc);
+                }
+            });
+
+            this.closeBtn?.addEventListener('click', () => this.close());
+
+            // Close on escape is handled by default for dialog, 
+            // but we need to stop the video
+            this.dialog.addEventListener('close', () => {
+                this.video.pause();
+                this.video.currentTime = 0;
+            });
+
+            // Close clicking outside the modal
+            this.dialog.addEventListener('click', (e) => {
+                if (e.target === this.dialog) {
+                    this.close();
+                }
+            });
+        },
+
+        open(src) {
+            this.video.src = src;
+            this.dialog.showModal();
+            this.video.play().catch(e => console.log('Autoplay prevented or video failed to load', e));
+        },
+
+        close() {
+            this.dialog.close();
+        }
+    };
+
+    /* ============================================
+       Screenshot Modal Module
+       ============================================ */
+    const ScreenshotModal = {
+        dialog: null,
+        img: null,
+        counter: null,
+        currentProject: '',
+        currentIndex: 0,
+        projectTotals: {
+            chatapp: 3,
+            guesswars: 3,
+            horoscoapp: 6
+        },
+
+        init() {
+            this.dialog = document.getElementById('screenshotModal');
+            if (!this.dialog) return;
+
+            this.img = this.dialog.querySelector('img');
+            this.counter = this.dialog.querySelector('.screenshot-counter');
+
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.screenshot-btn');
+                if (btn) {
+                    e.preventDefault();
+                    this.currentProject = btn.getAttribute('data-project');
+                    this.open();
+                }
+            });
+
+            this.dialog.querySelector('.prev').addEventListener('click', () => this.prev());
+            this.dialog.querySelector('.next').addEventListener('click', () => this.next());
+            this.dialog.querySelector('.close-modal').addEventListener('click', () => this.close());
+
+            this.dialog.addEventListener('click', (e) => {
+                if (e.target === this.dialog) this.close();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!this.dialog.open) return;
+                if (e.key === 'ArrowLeft') this.prev();
+                if (e.key === 'ArrowRight') this.next();
+            });
+        },
+
+        open() {
+            this.currentIndex = 1;
+            this.updateImage();
+            this.dialog.showModal();
+        },
+
+        updateImage() {
+            const indexStr = String(this.currentIndex).padStart(2, '0');
+            const total = this.projectTotals[this.currentProject] || 3;
+            this.img.src = `src/screenshots/${this.currentProject}/Screenshot_${indexStr}.png`;
+            this.counter.textContent = `${this.currentIndex} / ${total}`;
+        },
+
+        next() {
+            const total = this.projectTotals[this.currentProject] || 3;
+            this.currentIndex = this.currentIndex % total + 1;
+            this.updateImage();
+        },
+
+        prev() {
+            const total = this.projectTotals[this.currentProject] || 3;
+            this.currentIndex = this.currentIndex === 1 ? total : this.currentIndex - 1;
+            this.updateImage();
+        },
+
+        close() {
+            this.dialog.close();
+        }
+    };
+
+    /* ============================================
        Bootstrap
        ============================================ */
 
@@ -371,6 +503,8 @@
         MobileMenu.init();
         ScrollReveal.init();
         Navigation.init();
+        VideoModal.init();
+        ScreenshotModal.init();
     });
 
 })();
