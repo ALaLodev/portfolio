@@ -170,32 +170,25 @@
        ============================================ */
 
     const Theme = {
+
+
+
         getPreferred() {
             const stored = localStorage.getItem('theme');
             if (stored) return stored;
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            return 'light';
         },
-
         set(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
         },
-
         toggle() {
             const current = document.documentElement.getAttribute('data-theme');
             this.set(current === 'dark' ? 'light' : 'dark');
         },
-
         init() {
             this.set(this.getPreferred());
-
             document.getElementById('themeToggle').addEventListener('click', () => this.toggle());
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    this.set(e.matches ? 'dark' : 'light');
-                }
-            });
         }
     };
 
