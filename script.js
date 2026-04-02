@@ -69,12 +69,15 @@
             edu2_desc: 'Java 21, Spring Boot 3, Microservicios.',
             edu3_title: 'Grado Superior DAM',
             edu3_desc: 'Desarrollo de Aplicaciones Multiplataforma.',
-            edu4_title: 'Flutter (250h)',
+            edu4_title: 'Curso de Desarrollo de aplicaciones móviles iOS/Android con Flutter (250 h)',
             edu4_desc: 'Desarrollo de aplicaciones Android/iOS con Flutter.',
             edu5_title: 'Kotlin + Jetpack Compose (54h)',
             edu5_desc: 'Kotlin con Jetpack Compose y Firebase para Android.',
             edu6_title: 'Bases de Datos',
             edu6_desc: 'Diseño y Programación de Bases de Datos.',
+            edu_firebase_title: 'Curso de Firebase para Android (186h)',
+            edu_firebase_desc: 'Google Firebase: Auth, Firestore, Storage, Hosting, Functions y Messaging.',
+            edu_firebase_inst: 'Udemy',
             languages_title: 'Idiomas',
             lang_native: 'Nativo',
             contact_title: 'Contacto',
@@ -139,12 +142,15 @@
             edu2_desc: 'Java 21, Spring Boot 3, Microservices.',
             edu3_title: 'Higher Degree DAM',
             edu3_desc: 'Multiplatform Application Development.',
-            edu4_title: 'Flutter (250h)',
+            edu4_title: 'iOS/Android Mobile App Development with Flutter (250 h)',
             edu4_desc: 'Android/iOS application development with Flutter.',
             edu5_title: 'Kotlin + Jetpack Compose (54h)',
             edu5_desc: 'Kotlin with Jetpack Compose and Firebase for Android.',
             edu6_title: 'Databases',
             edu6_desc: 'Database Design and Programming.',
+            edu_firebase_title: 'Firebase for Android Course (186h)',
+            edu_firebase_desc: 'Google Firebase: Auth, Firestore, Storage, Hosting, Functions, and Messaging.',
+            edu_firebase_inst: 'Udemy',
             languages_title: 'Languages',
             lang_native: 'Native',
             contact_title: 'Contact',
@@ -494,6 +500,52 @@
     };
 
     /* ============================================
+       Cert Modal Module
+       ============================================ */
+    const CertModal = {
+        dialog: null,
+        iframe: null,
+        closeBtn: null,
+
+        init() {
+            this.dialog = document.getElementById('certModal');
+            if (!this.dialog) return;
+
+            this.iframe = this.dialog.querySelector('iframe');
+            this.closeBtn = this.dialog.querySelector('.close-modal');
+
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.cert-btn');
+                if (btn) {
+                    e.preventDefault();
+                    const certFile = btn.getAttribute('data-cert');
+                    if (certFile) this.open(`src/screenshots/${certFile}`);
+                }
+            });
+
+            this.closeBtn?.addEventListener('click', () => this.close());
+
+            // Close clicking outside the modal
+            this.dialog.addEventListener('click', (e) => {
+                if (e.target === this.dialog) {
+                    this.close();
+                }
+            });
+        },
+
+        open(src) {
+            this.iframe.src = src;
+            this.dialog.showModal();
+        },
+
+        close() {
+            this.iframe.src = ''; // Clear iframe src to stop loading if modal is closed
+            this.dialog.close();
+        }
+    };
+
+
+    /* ============================================
        Bootstrap
        ============================================ */
 
@@ -505,6 +557,7 @@
         Navigation.init();
         VideoModal.init();
         ScreenshotModal.init();
+        CertModal.init();
     });
 
 })();
