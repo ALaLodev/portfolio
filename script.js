@@ -427,7 +427,8 @@
         projectTotals: {
             chatapp: 3,
             guesswars: 3,
-            horoscoapp: 6
+            horoscoapp: 6,
+            pennytrack: 7
         },
 
         init() {
