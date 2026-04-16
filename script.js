@@ -203,7 +203,7 @@
             document.documentElement.lang = lang;
 
             const langLabel = document.querySelector('.lang-label');
-            if (langLabel) langLabel.textContent = lang.toUpperCase();
+            if (langLabel) langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
 
             const mobileLangBtn = document.getElementById('mobileLangBtn');
             if (mobileLangBtn) mobileLangBtn.textContent = lang === 'es' ? 'EN' : 'ES';
