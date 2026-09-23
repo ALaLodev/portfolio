@@ -877,6 +877,13 @@ a {
     box-shadow: var(--md-sys-elevation-2);
 }
 
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+}
+
 .project-icon {
     width: 48px;
     height: 48px;
@@ -886,6 +893,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.featured-badge {
+    font-size: var(--md-sys-typescale-label-small);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: var(--md-sys-shape-corner-full);
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: 1px solid var(--md-sys-color-primary);
+    display: inline-flex;
+    align-items: center;
 }
 
 .project-icon svg {

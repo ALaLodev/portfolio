@@ -71,9 +71,12 @@
                 <div class="hero-meta" data-reveal data-delay="4">
                     <span class="meta-chip">Java 17+</span>
                     <span class="meta-chip">Spring Boot 3</span>
+                    <span class="meta-chip">Apache Kafka</span>
                     <span class="meta-chip">Kotlin</span>
                     <span class="meta-chip">Flutter</span>
                     <span class="meta-chip">Clean Architecture</span>
+                    <span class="meta-chip">MVVM</span>
+                    <span class="meta-chip">Grafana</span>
                 </div>
             </div>
             <div class="hero-visual">
@@ -136,7 +139,7 @@
                                     <h3 class="timeline-role" data-i18n="psicaid_role">Backend & Mobile Developer</h3>
                                     <p class="timeline-company" data-i18n="psicaid_company">Psicaid — Valencia, España</p>
                                 </div>
-                                <span class="timeline-date" data-i18n="psicaid_date">Feb 2026 – Actualidad</span>
+                                <span class="timeline-date" data-i18n="psicaid_date">Febrero 2026 – Actualidad</span>
                             </div>
                             <div class="timeline-tags">
                                 <span class="tag">Java 17</span>
@@ -199,7 +202,10 @@
                             <span class="pill">Spring Boot 3</span>
                             <span class="pill">Spring Cloud</span>
                             <span class="pill">Spring WebFlux</span>
+                            <span class="pill">Apache Kafka</span>
+                            <span class="pill">Redis</span>
                             <span class="pill">Hibernate/JPA</span>
+                            <span class="pill">Prometheus / Grafana</span>
                             <span class="pill">Jakarta EE</span>
                             <span class="pill">Maven</span>
                             <span class="pill">Node.js</span>
@@ -212,6 +218,7 @@
                         <div class="skill-pills">
                             <span class="pill">Kotlin</span>
                             <span class="pill">Jetpack Compose</span>
+                            <span class="pill">Dagger Hilt</span>
                             <span class="pill">Flutter</span>
                             <span class="pill">Dart</span>
                             <span class="pill">Android SDK</span>
@@ -245,6 +252,9 @@
                         <h3 class="bento-title" data-i18n="skill_infra">Infraestructura</h3>
                         <div class="skill-pills">
                             <span class="pill">Docker</span>
+                            <span class="pill">Apache Kafka</span>
+                            <span class="pill">Prometheus / Grafana</span>
+                            <span class="pill">Redis</span>
                             <span class="pill">PostgreSQL</span>
                             <span class="pill">Supabase</span>
                             <span class="pill">Firebase</span>
@@ -258,6 +268,7 @@
                     <div class="bento-card bento-wide" data-reveal data-delay="3">
                         <h3 class="bento-title" data-i18n="skill_other">Otros</h3>
                         <div class="skill-pills">
+                            <span class="pill">Angular 21</span>
                             <span class="pill">RESTful APIs</span>
                             <span class="pill">JWT Auth</span>
                             <span class="pill">Scrum / Kanban</span>
@@ -280,6 +291,75 @@
                 </div>
                 <div class="projects-grid">
                     <article class="project-card" data-reveal>
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                                </svg>
+                            </div>
+                            <span class="featured-badge" data-i18n="featured_badge">Destacado</span>
+                        </div>
+                        <h3 class="project-name" data-i18n="project_skylink_mobile_title">SkyLink App — Pasajeros Android</h3>
+                        <p class="project-desc" data-i18n="project_skylink_mobile">Aplicación móvil nativa para pasajeros de SkyLink GDS desarrollada en Kotlin con interfaz 100% declarativa en Jetpack Compose bajo Clean Architecture y patrón MVVM estricto. Implementa gestión asíncrona reactiva con Coroutines y StateFlow, inyección de dependencias con Dagger Hilt y almacenamiento seguro de credenciales JWT a nivel de hardware con Jetpack Security (EncryptedSharedPreferences). Permite búsqueda dinámica de vuelos, selección de asientos por cabina y gestión de tarjetas de embarque digitales conectada al API Gateway.</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Kotlin</span>
+                            <span class="tag-sm">Jetpack Compose</span>
+                            <span class="tag-sm">Clean Architecture</span>
+                            <span class="tag-sm">MVVM</span>
+                            <span class="tag-sm">Coroutines</span>
+                            <span class="tag-sm">StateFlow</span>
+                            <span class="tag-sm">Dagger Hilt</span>
+                            <span class="tag-sm">Retrofit</span>
+                            <span class="tag-sm">Security</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-demo demo-btn" data-video="src/video/SkyLink GDS Mobile.mp4">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                <span data-i18n="project_demo">Demo</span>
+                            </button>
+                            <a href="https://github.com/ALaLodev/airlines-gds-system" target="_blank" rel="noopener" class="project-link" aria-label="SkyLink App en GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-reveal data-delay="1">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="6" rx="2"/><rect x="2" y="15" width="20" height="6" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/><path d="M12 9v6M8 12h8"/>
+                                </svg>
+                            </div>
+                            <span class="featured-badge" data-i18n="featured_badge">Destacado</span>
+                        </div>
+                        <h3 class="project-name" data-i18n="project_skylink_gds_title">SkyLink GDS — Backend & Dashboard B2B</h3>
+                        <p class="project-desc" data-i18n="project_skylink_gds">Ecosistema distribuido y panel de control para aerolíneas. Backend en Java 21 con Spring Boot y Spring Cloud (Eureka, Gateway reactivo con Circuit Breakers Resilience4j y Rate Limiting en Redis), orquestación asíncrona mediante Saga Choreography con Apache Kafka y observabilidad integral con Prometheus, Grafana y Zipkin. Frontend corporativo en Angular 21 (arquitectura standalone, Zoneless, mapa interactivo de asientos en Boeing 787-9 y monitorización de salud del clúster con streaming de telemetría y logs).</p>
+                        <div class="project-tags">
+                            <span class="tag-sm">Java 21</span>
+                            <span class="tag-sm">Spring Cloud</span>
+                            <span class="tag-sm">Apache Kafka</span>
+                            <span class="tag-sm">Angular 21</span>
+                            <span class="tag-sm">Prometheus</span>
+                            <span class="tag-sm">Grafana</span>
+                            <span class="tag-sm">Zipkin</span>
+                            <span class="tag-sm">Redis</span>
+                            <span class="tag-sm">Resilience4j</span>
+                            <span class="tag-sm">Docker</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-demo demo-btn" data-video="src/video/SkyLink GDS Admin.mp4">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                <span data-i18n="project_demo">Demo</span>
+                            </button>
+                            <a href="https://github.com/ALaLodev/airlines-gds-system" target="_blank" rel="noopener" class="project-link" aria-label="SkyLink GDS en GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-reveal data-delay="2">
                         <div class="project-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -307,7 +387,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="project-card" data-reveal data-delay="1">
+                    <article class="project-card" data-reveal>
                         <div class="project-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
@@ -335,7 +415,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="project-card" data-reveal data-delay="2">
+                    <article class="project-card" data-reveal data-delay="1">
                         <div class="project-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
@@ -361,7 +441,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="project-card" data-reveal>
+                    <article class="project-card" data-reveal data-delay="2">
                         <div class="project-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -387,7 +467,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="project-card" data-reveal data-delay="1">
+                    <article class="project-card" data-reveal>
                         <div class="project-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -414,7 +494,7 @@
                             </a>
                         </div>
                     </article>
-                    <article class="project-card" data-reveal data-delay="2">
+                    <article class="project-card" data-reveal data-delay="1">
                         <div class="project-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20M2 12h20"/>
